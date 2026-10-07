@@ -1,0 +1,14 @@
+.hero-particle-title { position: relative; }
+.immersive-copy .hero-title-readable { font-weight: 800; }
+.hero-title-line-mask { display: block; overflow: hidden; }
+.hero-title-line-ink { display: block; width: fit-content; max-width: 100%; transform-origin: 0% 100%; }
+.hero-title-readable { transition: opacity 350ms ease; }
+.hero-particle-title.is-animated .hero-title-readable { opacity: 0; }
+.hero-title-particle-layer { position: absolute; inset: 0; font-weight: 800; opacity: 0; transition: opacity 350ms ease; }
+.hero-particle-title.is-animated .hero-title-particle-layer { opacity: 1; }
+.hero-title-particle-line { position: relative; width: fit-content; max-width: 100%; }
+.hero-title-line-metrics { display: block; visibility: hidden; white-space: nowrap; }
+.hero-title-particle-line .particle-text { position: absolute; inset: 0; min-height: 0; touch-action: pan-y; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-title-readable, .hero-title-particle-layer { transition: none; }
+}

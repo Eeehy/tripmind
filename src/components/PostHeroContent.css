@@ -1,0 +1,23 @@
+.post-hero-content { position: relative; isolation: isolate; background: #080b13; }
+.post-hero-content > .main-container { position: relative; z-index: 1; }
+.page-galaxy-background { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.page-galaxy-viewport {
+  position: sticky;
+  top: 84px;
+  height: max(600px, calc(100svh - 84px));
+  opacity: .75;
+  mask-image: linear-gradient(transparent, #000 12%, #000 78%, transparent);
+  -webkit-mask-image: linear-gradient(transparent, #000 12%, #000 78%, transparent);
+}
+.galaxy-backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 31px 43px, #b4d5ff66 0 1px, transparent 2px), radial-gradient(circle at 97px 127px, #b587ed55 0 1px, transparent 2px), radial-gradient(ellipse at 50% 45%, #83adfb0d, transparent 70%);
+  background-size: 173px 211px, 239px 283px, 100% 100%;
+}
+.page-galaxy-control { position: absolute; z-index: 2; top: 16px; right: max(56px, calc((100vw - 1536px) / 2)); min-height: 36px; padding: 7px 12px; font-size: 12px; border-radius: 24px; }
+@media (max-width: 1250px) { .page-galaxy-control { right: 32px; } }
+@media (max-width: 760px) {
+  .page-galaxy-viewport { top: 70px; height: max(600px, calc(100svh - 70px)); }
+  .page-galaxy-control { right: 18px; }
+}

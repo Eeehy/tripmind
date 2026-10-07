@@ -1,0 +1,11 @@
+/* Seven days stay available without widening the card or the page. */
+.planner-result { min-width: 0; }
+.day-tabs {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #83adfb65 transparent;
+}
+.day-tabs > button { flex-shrink: 0; white-space: nowrap; }
+.day-tabs > button:focus-visible { outline-offset: -3px; }

@@ -1,0 +1,17 @@
+.hotspot-suggestions { margin-bottom: 12px; }
+.hotspot-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; font-size: 11px; color: #b8c4da; }
+.hotspot-heading > span:first-child { display: flex; gap: 6px; align-items: center; }
+.hotspot-heading svg { color: #c39afa; }
+.hotspot-city { color: #c8b5f2; margin-left: 4px; }
+.hotspot-curated { color: #9aa8bf; font-size: 10px; }
+.hotspot-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.hotspot-chips button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; max-width: 100%; padding: 8px 12px; border: 1px solid #a0a9dc38; border-radius: 10px; background: linear-gradient(115deg, #67ccee10, #ba8ce915); color: #dce6fa; cursor: pointer; font: inherit; font-size: 12px; transition: background-color .25s ease, border-color .25s ease, color .25s ease; }
+.hotspot-chips svg { flex-shrink: 0; color: #b1adf8; }
+.hotspot-name, .hotspot-tag { white-space: nowrap; }
+.hotspot-tag { font-size: 10px; color: #9ba9c3; padding-left: 7px; border-left: 1px solid #b3c3f32a; }
+.hotspot-chips button:not(:disabled):hover { background-color: #9b77dd27; border-color: #bd97ef90; color: #ffffff; }
+.hotspot-chips button:focus-visible { outline: 2px solid #8dcaff; outline-offset: 3px; }
+.hotspot-chips button:disabled { cursor: wait; opacity: .5; }
+@media (max-width: 760px) { .hotspot-chips button { gap: 6px; padding: 8px 10px; } }
+@media (max-width: 390px) { .hotspot-chips { gap: 8px; } .hotspot-chips button { flex: 1 1 100%; justify-content: flex-start; } .hotspot-tag { margin-left: auto; } }
+@media (prefers-reduced-motion: reduce) { .hotspot-chips button { transition: none; } }

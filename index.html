@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Every new document starts the Demo opening, including first visits.
+      // Resolve this before React/GSAP render
+      // so the previous section and the browser's saved scroll cannot flash.
+      {
+        history.scrollRestoration = 'manual';
+        history.replaceState(history.state, '', location.pathname + location.search + '#home');
+        window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
+        window.addEventListener('load', () => {
+          window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
+          requestAnimationFrame(() => {
+            history.scrollRestoration = 'auto';
+            window.dispatchEvent(new Event('tripmind:startup-ready'));
+          });
+        }, { once: true });
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="image" href="/images/hero-video-poster-v2.jpg" fetchpriority="high" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b13" />
+    <meta name="description" content="途知 TripMind，让每一次出发都有 AI 相伴。体验智能旅游问答、景点识别与个性化行程规划。" />
+    <title>途知 TripMind · AI 文旅智能导览</title>
+  </head>
+  <body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body>
+</html>

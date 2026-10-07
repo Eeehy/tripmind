@@ -1,0 +1,26 @@
+.inspiration-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  border-block: 1px solid #83adfb26;
+  background: radial-gradient(ellipse at 76% 50%, #83adfb10, transparent 55%);
+}
+
+.inspiration-copy { padding: 42px 36px; }
+.inspiration-copy h2 { font-size: clamp(30px, 3.2vw, 48px); line-height: 1.4; letter-spacing: -1px; font-weight: 550; }
+.inspiration-description { margin: 22px 0 28px; color: #b3bed0; font-size: 15px; line-height: 1.9; }
+.inspiration-note { max-width: 380px; margin-top: 18px; font-size: 12px; color: #8e9cb4; line-height: 1.8; }
+.inspiration-gallery { min-width: 0; isolation: isolate; }
+.inspiration-gallery-controls { position: absolute; z-index: 100010; bottom: 25px; left: 28px; right: 28px; display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+.inspiration-gallery-controls > span { color: #aabbd1; font-size: 12px; }
+.inspiration-pause { min-height: 36px; padding: 7px 12px; font-size: 12px; border-radius: 24px; }
+
+@media (max-width: 760px) {
+  .inspiration-layout { grid-template-columns: minmax(0, 1fr); }
+  .inspiration-copy { padding: 32px 18px 0; }
+  .inspiration-copy h2 { font-size: 32px; }
+  .inspiration-description { font-size: 14px; }
+  .inspiration-gallery-controls { left: 10px; right: 10px; }
+  /* Allow vertical page scrolling over the gallery on touch screens. */
+  .inspiration-gallery .infinite-spiral { touch-action: pan-y !important; }
+}

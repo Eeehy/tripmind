@@ -1,0 +1,10 @@
+.guide-library { margin: 20px 0; padding: 16px; background: #ffffff04; border: 1px solid #aac4ff24; border-radius: 12px; }
+.guide-library-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px; color: #d6e4fb; margin-bottom: 12px; }
+.guide-library-heading small { color: #8d9bb4; font-size: 11px; }
+.guide-library-fields { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 10px; }
+.guide-library label { display: grid; gap: 6px; font-size: 11px; color: #96a5bd; min-width: 0; }
+.guide-library select { width: 100%; min-width: 0; min-height: 44px; padding: 8px 10px; border: 1px solid #aac4ff35; border-radius: 8px; background: #171c2a; color: #e4edff; font: inherit; font-size: 13px; text-overflow: ellipsis; }
+.guide-library select:focus-visible { outline: 2px solid #82bcff; outline-offset: 3px; }
+.guide-library select:disabled { opacity: .6; }
+.guide-library p { color: #8897b0; font-size: 11px; line-height: 1.7; margin: 10px 0 0; }
+@media (max-width: 390px) { .guide-library { padding: 12px; } .guide-library-fields { grid-template-columns: 1fr; } }
